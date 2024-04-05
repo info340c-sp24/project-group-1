@@ -3,5 +3,6 @@
 This repository contains code for an interactive information web app, created for the _Client-Side Web Development_ course at the UW iSchool.
 
 Group Members:
-Mason Koh\
+Mason Koh
 Asad Jaffery
+Shammu Meyyappan
