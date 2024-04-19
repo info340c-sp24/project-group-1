@@ -6,3 +6,45 @@ body{
 h2{
     color:blue;
 }
+
+/* Container for search bar and form */
+.search-container {
+    position: relative;
+}
+
+/* Search input */
+#search_bar {
+    width: 400px; 
+}
+
+/* Position the form */
+#course_filter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Style checkboxes and labels */
+input[type="checkbox"] {
+    margin-right: 5px;
+    float: left;
+}
+form{
+    display: flex;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Align drop-downs and input fields to the right */
+#GPA_input, #workload_input, #specialization_input {
+    float: right;
+}
+
+
+
