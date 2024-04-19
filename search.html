@@ -7,10 +7,14 @@
         <link rel="stylesheet" href="css/project-styling.css">
     </head>
 
-    <body>
+    <header>
         <nav>
-            <button type="button">Sign In</button>
+            <img src="../img/iSchool_logo.jpg" alt="iSchool logo">
+            <h1><a href="index.html">Planner</a></h1>
         </nav>
+    </header>
+
+    <body>
         <!-- heading and image (need to get them on the same line) -->
         <img src="img/iSchool_logo.png" alt="iSchool logo" height="100px" weight="100px">
         <h1>Planner</h1>  
@@ -19,11 +23,32 @@
             <input name="search" type="search" placeholder="Search for a course to get started" id="search_bar"></input>
         </section>
 
-        <section id="course_filter">
-            <label for="email_input">Average GPA:</label>
-            <input name="" type="email" placeholder="email@domain.com" id="email_input"></input>
-            <label for="password_input">Password:</label>
-            <input name="password" type="password" id="password_input"></input>
+        <!-- search filter form-->
+        <section>
+            <form id="cours_filer">
+                <label for="GPA_input">Average GPA:</label>
+                <input name="GPA input" type="number" min="0.0" max="4.0" placeholder="" id="GPA_input"></input>
+
+                <label for="workload_input">Workload:</label>
+                <select name="workload" id="workload_input">
+                    <option value="Light">Light</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Heavy">Heavy</option>
+                </select>
+
+                <label for="specialization_input">Specialization:</label>
+                <select name="specialization" id="specialization_input">
+                    <option value="Data Science">Data Science</option>
+                    <option value="Biomedical">Biomedical</option>
+                </select>
+
+                <input type="checkbox" id="Prerequisites_check" name="Prerequisites" value="Bike">
+                <label for="Prerequisites_check"> Prerequisites?</label>
+
+                <input type="checkbox" id="coding_check" name="Coding" value="Bike">
+                <label for="coding_check"> Coding Required?</label>
+
+            </form>
         </section>
 
     </body>
