@@ -10,7 +10,7 @@ h2{
 
 .container {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .column {
