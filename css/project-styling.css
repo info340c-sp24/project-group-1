@@ -81,10 +81,6 @@ label {
     margin-bottom: 5px;
 }
 
-#sign_in_form{
-    margin-top: 10%;
- }
-
 /* Align drop-downs and input fields to the right */
 #GPA_input, #workload_input, #specialization_input {
     float: right;
