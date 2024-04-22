@@ -40,17 +40,8 @@ nav ul li img {
     height: auto;
 }
 
-/* Defines the grid for the course page */
-.course-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.course-column {
-    width: 50%;
-}
-
-.course-column img {
+/* rules for images */
+img {
     width: 100%;
     height: auto;
 }
@@ -130,5 +121,19 @@ label {
     .sign_in_form input,
     .sign_in_form a{
        
+    }
+
+    .course-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .course-column {
+        width: 50%;
+    }
+    
+    .course-column img {
+        width: 100%;
+        height: auto;
     }
  }
