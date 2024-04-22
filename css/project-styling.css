@@ -113,4 +113,7 @@ label {
 }
 .login{
     float: right;
-}
+ }
+ #sign_in_form{
+    margin-top: 10%;
+ }
