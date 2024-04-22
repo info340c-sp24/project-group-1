@@ -108,3 +108,9 @@ label {
     height: 125px; /* Fixed height for all boxes */
     border-radius: 20px; /* Rounded corners */
 }
+.search{
+    text-align: center;
+}
+.login{
+    float: right;
+}
