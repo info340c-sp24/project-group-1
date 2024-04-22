@@ -1,5 +1,9 @@
 body {
     margin-top: 60px;
+    background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+    background-size: cover; /* This ensures the background image covers the entire screen */
+    background-position: center; /* This centers the background image */
+    background-repeat: no-repeat; /* This prevents the background image from repeating */
 }
 
 nav {
@@ -32,16 +36,16 @@ nav ul li img {
 h1 {
     padding-top: 20px;
 }
-.container {
+.course-container {
     display: flex;
     flex-direction: row;
 }
 
-.column {
+.course-column {
     width: 50%;
 }
 
-.column img {
+.course-column img {
     width: 100%;
     height: auto;
 }
@@ -90,18 +94,18 @@ label {
 
 
 
-.container {
+.index-container {
     display: flex;
     align-items: center;
 }
 
-.column {
+.index-column {
     flex-basis: 30%; /* Adjust the width as needed */
     padding: 10px; /* Padding around the content */
     box-sizing: border-box; /* Include padding in width calculation */
 }
 
-.box {
+.index-box {
     border: 1px solid #ccc; /* Border for each box */
     padding: 10px; /* Padding within each box */
     margin-bottom: 10px; /* Add some space between boxes */
