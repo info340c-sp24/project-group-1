@@ -124,31 +124,11 @@ label {
     text-align: center;
 }
 
-/*Rules for the login page */
-.login{
-    float: right;
- }
- /* Media query for screens up to 768px (small screens) */
-@media only screen and (max-width: 768px) {
-    /* Stack form elements vertically */
-    #sign_in_form label,
-    #sign_in_form input,
-    #sign_in_form a {
-        display: block;
-        width: 100%;
-        margin-bottom: 1rem;
-        margin-top: 10%;
-    }
-}
 
-/* Media query for screens above 768px (large screens) */
-@media only screen and (min-width: 768px) {
-    /* Adjust column widths or other styles as needed */
-    /* Example: .col-1 { width: 8.33%; } */
-    #sign_in_form label,
-    #sign_in_form input,
-    #sign_in_form a {
-        display: inline;
-        margin-top: 10%; 
+ @media (min-width: 598px) { 
+    .sign_in_form label,
+    .sign_in_form input,
+    .sign_in_form a{
+       
     }
-}
+ }
