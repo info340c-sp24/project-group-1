@@ -1,9 +1,5 @@
 body {
     margin-top: 60px;
-    background-image: url("../img/mgh.jpg");
-    background-size: cover; /* This ensures the background image covers the entire screen */
-    background-position: center; /* This centers the background image */
-    background-repeat: no-repeat; /* This prevents the background image from repeating */
 }
 
 nav {
@@ -117,7 +113,4 @@ label {
 }
 .login{
     float: right;
-}
-#sign_in_form{
-    align-items: center;
 }
