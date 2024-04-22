@@ -1,7 +1,18 @@
+/* Body rules */
 body {
     margin-top: 60px;
 }
 
+/* Heading rules */
+h1 {
+    padding-top: 20px;
+}
+
+h2{
+    color:blue;
+}
+
+/* Rules for the navbar */
 nav {
     position: fixed;
     top: 0;
@@ -29,9 +40,7 @@ nav ul li img {
     height: auto;
 }
 
-h1 {
-    padding-top: 20px;
-}
+/* Defines the grid for the course page */
 .course-container {
     display: flex;
     flex-direction: row;
@@ -44,9 +53,6 @@ h1 {
 .course-column img {
     width: 100%;
     height: auto;
-}
-h2{
-    color:blue;
 }
 
 /* Container for search bar and form */
@@ -69,11 +75,12 @@ h2{
     border: 1px solid #ddd;
 }
 
-/* Style checkboxes and labels */
+/* Style checkboxes and labels for the search page*/
 input[type="checkbox"] {
     margin-right: 5px;
     float: left;
 }
+
 form{
     display: flex;
 }
@@ -83,13 +90,16 @@ label {
     margin-bottom: 5px;
 }
 
+#sign_in_form{
+    margin-top: 10%;
+ }
+
 /* Align drop-downs and input fields to the right */
 #GPA_input, #workload_input, #specialization_input {
     float: right;
 }
 
-
-
+/* Defines the grid for the index page */
 .index-container {
     display: flex;
     align-items: center;
@@ -108,12 +118,13 @@ label {
     height: 125px; /* Fixed height for all boxes */
     border-radius: 20px; /* Rounded corners */
 }
+
+/* Rules for the search page */
 .search{
     text-align: center;
 }
+
+/*Rules for the login page */
 .login{
     float: right;
- }
- #sign_in_form{
-    margin-top: 10%;
  }
