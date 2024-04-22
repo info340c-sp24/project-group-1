@@ -118,3 +118,6 @@ label {
 .login{
     float: right;
 }
+#sign_in_form{
+    align-items: center;
+}
