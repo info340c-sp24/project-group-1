@@ -1,18 +1,23 @@
 /* Body rules */
+
 body {
     margin-top: 60px;
 }
 
+
 /* Heading rules */
+
 h1 {
     padding-top: 20px;
 }
 
-h2{
-    color:blue;
+h2 {
+    color: blue;
 }
 
+
 /* Rules for the navbar */
+
 nav {
     position: fixed;
     top: 0;
@@ -40,105 +45,66 @@ nav ul li img {
     height: auto;
 }
 
+
 /* rules for images */
+
 .course-container img {
     width: 100%;
     height: auto;
 }
 
-/* Container for search bar and form */
-.search-container {
-    position: relative;
-}
-
-/* Search input */
-#search_bar {
-    width: 400px; 
-}
 
 /* Position the form */
-#course_filter {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-/* Style checkboxes and labels for the search page*/
-input[type="checkbox"] {
-    margin-right: 5px;
-    float: left;
-}
-
-form{
-    display: flex;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* Align drop-downs and input fields to the right */
-#GPA_input, #workload_input, #specialization_input {
-    float: right;
-}
-
-/* Rules for the search page */
-.search{
-    text-align: center;
-}
 
 .index-box {
-    border: 1px solid #ccc; /* Border for each box */
-    padding: 10px; /* Padding within each box */
-    margin-bottom: 10px; /* Add some space between boxes */
-    height: 125px; /* Fixed height for all boxes */
-    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #ccc;
+    /* Border for each box */
+    padding: 10px;
+    /* Padding within each box */
+    margin-bottom: 10px;
+    /* Add some space between boxes */
+    height: 125px;
+    /* Fixed height for all boxes */
+    border-radius: 20px;
+    /* Rounded corners */
 }
 
 .sign_in_form label,
-    .sign_in_form input,
-    .sign_in_form a{
-        display: block;
-        margin-top: 10%;
-        margin-bottom: 1rem;
+.sign_in_form input,
+.sign_in_form a {
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 1rem;
 }
 
-
- @media (min-width: 598px) { 
+@media (min-width: 598px) {
     /* Defines the grid for the index page */
     .index-container {
         display: flex;
         align-items: center;
     }
-
     .index-column {
-        flex-basis: 30%; /* Adjust the width as needed */
-        padding: 10px; /* Padding around the content */
-        box-sizing: border-box; /* Include padding in width calculation */
+        flex-basis: 30%;
+        /* Adjust the width as needed */
+        padding: 10px;
+        /* Padding around the content */
+        box-sizing: border-box;
+        /* Include padding in width calculation */
     }
-
     .sign_in_form label,
     .sign_in_form input,
-    .sign_in_form a{
-       display: inline;
+    .sign_in_form a {
+        display: inline;
     }
-
-
     .course-container {
         display: flex;
         flex-direction: row;
     }
-    
     .course-column {
         width: 50%;
     }
-    
     .course-column img {
         width: 100%;
         height: auto;
     }
- }
+}
