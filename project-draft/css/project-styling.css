@@ -1,0 +1,110 @@
+/* Body rules */
+
+body {
+    margin-top: 60px;
+}
+
+
+/* Heading rules */
+
+h1 {
+    padding-top: 20px;
+}
+
+h2 {
+    color: blue;
+}
+
+
+/* Rules for the navbar */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #dfdfdf;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+    font-size: 40px;
+}
+
+nav ul li img {
+    width: 40px;
+    height: auto;
+}
+
+
+/* rules for images */
+
+.course-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Position the form */
+
+.index-box {
+    border: 1px solid #ccc;
+    /* Border for each box */
+    padding: 10px;
+    /* Padding within each box */
+    margin-bottom: 10px;
+    /* Add some space between boxes */
+    height: 125px;
+    /* Fixed height for all boxes */
+    border-radius: 20px;
+    /* Rounded corners */
+}
+
+.sign_in_form label,
+.sign_in_form input,
+.sign_in_form a {
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 598px) {
+    /* Defines the grid for the index page */
+    .index-container {
+        display: flex;
+        align-items: center;
+    }
+    .index-column {
+        flex-basis: 30%;
+        /* Adjust the width as needed */
+        padding: 10px;
+        /* Padding around the content */
+        box-sizing: border-box;
+        /* Include padding in width calculation */
+    }
+    .sign_in_form label,
+    .sign_in_form input,
+    .sign_in_form a {
+        display: inline;
+    }
+    .course-container {
+        display: flex;
+        flex-direction: row;
+    }
+    .course-column {
+        width: 50%;
+    }
+    .course-column img {
+        width: 100%;
+        height: auto;
+    }
+}
