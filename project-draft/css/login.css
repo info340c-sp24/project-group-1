@@ -1,0 +1,33 @@
+.container h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+form{
+    background-color: #dfdfdf;
+    border-radius: 20px;
+}
+
+form input{
+    height: 30px;
+    border-radius: 15px;
+}
+
+.login_form{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.login_form_item{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    font-size: 20px;
+}
+
+.login_form_item input {
+    font-size: 20px;
+    width: 200px;
+}

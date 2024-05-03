@@ -9,7 +9,7 @@
 .title h1 {
     font-size: 80px;
 }
-  
+
 
 .title img{
     border-radius: 30px;
@@ -23,7 +23,7 @@
 }
 
 .flex-item {
-    background-color: #f9f9f9;
+    background-color: #dfdfdf;
     margin-top: .9rem;
     padding: .5rem .5rem;
     border: 1px solid #ddd;
@@ -31,6 +31,10 @@
 }
 
 /* Style checkboxes and labels for the search page*/
+
+form input, form select{
+    border-radius: 7px;
+}
 
 .filter-container {  /* flexbox container for filter */
     display: flex;
