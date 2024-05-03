@@ -1,18 +1,26 @@
-h1, h2, h3, h4, h5, h6 {
+html {
     font-family: 'Encode Sans Condensed', sans-serif;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 /* Body rules */
 
 body {
     margin-top: 60px;
+}
+
+p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
 
 
 /* Heading rules */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: 800;
+}
 
 h1 {
     padding-top: 20px;
