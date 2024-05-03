@@ -1,14 +1,14 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Encode Sans Condensed', sans-serif;
-    font-weight: bold
+    font-weight: 800;
 }
 
 /* Body rules */
 
 body {
     margin-top: 60px;
-    font-family: 'Encode Sans Condensed', sans-serif;
-    font-weight: light;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 
