@@ -2,6 +2,10 @@
 
 body {
     margin-top: 60px;
+
+    /* for footer */
+    padding: 0;
+    margin-bottom: 80px;
 }
 
 
@@ -32,17 +36,20 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-flex;
     margin: 0 1rem;
     font-size: 40px;
+    align-items: center;
 }
 
 nav ul li img {
     width: 40px;
     height: auto;
+    margin: 0;
 }
 
 
@@ -89,7 +96,7 @@ footer {  /* footer styling*/
     color: #fff; /* Footer text color */
     text-align: center; /* Center-align text */
     line-height: .4rem; /* Adjust the value to decrease or increase the space between lines */
-  }
+}
 
 
   @media (min-width: 598px) {
@@ -135,6 +142,7 @@ footer {  /* footer styling*/
     footer{
         display: block;
     }
+    
 }
 
 @media (min-width: 1200px){
