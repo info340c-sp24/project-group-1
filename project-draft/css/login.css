@@ -14,12 +14,12 @@ form input{
     border-radius: 15px;
 }
 
-.login_form{
+.login_form, .create_account_form{
     display: flex;
     justify-content: center; 
     align-items: center;
 }
-.login_form_item{
+.login_form_item, .create_account_form_item{
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ form input{
     font-size: 20px;
 }
 
-.login_form_item input {
+.login_form_item input, .create_account_form_item input{
     font-size: 20px;
     width: 200px;
 }
