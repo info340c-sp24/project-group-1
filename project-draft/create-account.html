@@ -7,9 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/project-styling.css">
-        <link rel="stylesheet" href="css/project-styling.css">
-        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/project-styling.css">        <link rel="stylesheet" href="css/login.css">
         <link rel="icon" type="image/png" href="img/iSchool_logo.png">
     </head>
 
@@ -22,13 +20,15 @@
        </nav>
    </header>
 
+
     <body>
+        
         <div class="container">
             <h1>Create an Account</h1>
         
             <!-- create account in form -->
             <div class="create_account_form">
-                <form>
+                <form id="create_account">
 
                     <div class="create_account_form_item">
                         <label for="email_input">Email</label>
@@ -43,6 +43,10 @@
                     <div class="create_account_form_item">
                         <label for="confirm_password_input">Confirm Password</label>
                         <input name="confirm_password" type="password" placeholder="" id="confirm_password_input"></input>
+                    </div>
+
+                    <div class="create_account_form_item">
+                        <button type="submit" name="submit_button" id="submit_create_account_button">Create Account</input>
                     </div>
 
                     <div class="create_account_form_item">

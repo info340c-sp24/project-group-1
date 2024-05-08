@@ -1,0 +1,117 @@
+/* header */
+.title { /* this flexbox is to get the i school logo and title on the same line */
+    display: flex;
+    align-items: center;
+    margin: 3rem;
+    margin-bottom: .5rem;
+}
+
+.title h1 {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+}
+
+
+.title img{
+    border-radius: 30px;
+}
+  
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flex-item {
+    background-color: #dfdfdf;
+    margin-top: .9rem;
+    padding: .5rem .5rem;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+/* Style checkboxes and labels for the search page*/
+
+form input, form select{
+    border-radius: 7px;
+}
+
+.filter-container {  /* flexbox container for filter */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-item { /* flexbox item for filter - each filter is an item */
+    flex-wrap: wrap;
+    margin: 0.5rem; 
+}
+
+.checkbox-item{   /* flexbox container checkbox filters - this formats the checkbox filters correctly */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label { 
+    display: block;
+    margin-bottom: 5px;
+}
+
+footer {  /* footer styling*/
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 80px; /* Adjust as needed */
+    background-color: #333; /* Footer background color */
+    color: #fff; /* Footer text color */
+    text-align: center; /* Center-align text */
+    line-height: .4rem; /* Adjust the value to decrease or increase the space between lines */
+  }
+  
+
+#search_bar{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 598px) {
+    .filter-container {
+      flex-direction: column;
+    }
+  
+    .filter-item {
+      width: 100%; /* Ensure each item takes full width */
+    }
+  }
+  
+
+@media (min-width: 598px){
+    #search_bar{
+        width: 300px;
+    }
+}
+
+@media (min-width: 768px){
+    #search_bar{
+        width: 450px;
+    }
+}
+
+@media (min-width: 992px){
+    #search_bar{
+        width: 550px;
+    }
+    footer{
+        display: block;
+    }
+}
+
+@media (min-width: 1200px){
+}
