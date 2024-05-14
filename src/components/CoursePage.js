@@ -4,7 +4,7 @@ import Course from './Course';
 import '../css/project-styling.css';
 
 
-function CoursePage() {
+export function CoursePage() {
     const { code } = useParams();
     const [course, setCourse] = useState(null);
 
