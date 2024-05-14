@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import Course from './Course';
+import React from 'react';
+import coursesData from './courses.json'; // Import the course data
+import Course from './Course'; // Import the Course component
 import '../css/project-styling.css';
 
-
-export function CoursePage() {
-    const { code } = useParams();
-    const [course, setCourse] = useState(null);
-
-    useEffect(() => {
-        fetch('../../public/courses.json')
-            .then(response => response.json())
-            .then(data => {
-                const selectedCourse = data.find(course => course.code === code);
-                setCourse(selectedCourse);
-            });
-    }, [code]);
+function CoursePage({ code }) {
+    const course = coursesData.find(course => course.code === code);
 
     return (
         <div>
