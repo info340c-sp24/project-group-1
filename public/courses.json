@@ -1,0 +1,28 @@
+[
+    {
+        "code": "INFO 340",
+        "title": "Client-Side Development",
+        "description": "Introduction to client-side development on the internet, including markup, programming languages, protocols, libraries, and frameworks for creating and maintaining usable and accessible, interactive applications.",
+        "skills": ["HTML/CSS", "JavaScript", "React", "Bootstrap"],
+        "prerequisites": ["CSE 143", "CSE 154", "CSE 163", "INFO 201"],
+        "requirements": ["INFO core class"],
+        "workload": "medium",
+        "professors": ["James Kim", "Joel Ross"],
+        "image": "../img/htmlstockimage.jpg",
+        "imageSource": "https://pixabay.com/photos/code-html-digital-coding-web-1076536/",
+        "graph": "../img/info340_graph.jpg"
+    },
+    {
+        "code": "CSE 373",
+        "title": "Data Structures and Algorithms",
+        "description": "Fundamental algorithms and data structures for implementation. Techniques for solving problems by programming. Linked lists, stacks, queues, directed graphs. Trees: representations, traversals. Searching (hashing, binary search trees, multiway trees). Garbage collection, memory management. Internal and external sorting.",
+        "skills": ["Java"],
+        "prerequisites": ["CSE 123", "CSE 143"],
+        "requirements": ["CSE courses"],
+        "workload": "medium",
+        "professors": ["Kevin Lin", "Kasey Champion"],
+        "image": "../img/java_stock_img.jpg",
+        "imageSource": "https://www.finoit.com/articles/java-coding-standards-best-practices/",
+        "graph": "../img/cse373_graph.png"
+    }
+]
