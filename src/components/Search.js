@@ -1,15 +1,15 @@
 import React from "react";
-import "../css/search-page.css"
+import "../css/project-styling.css";
+import "../css/search-page.css";
 
 function Search() { 
 
     return (
         <div className="flex-container">
 
-        
             {/* {heading and image (need to get them on the same line)} */}
             <div className="title">
-                <img src="./img/iSchool_logo.png" alt="iSchool logo" height="100px" weight="100px"/>
+                <img src="../../public/img/iSchool_logo.png" alt="iSchool logo" height="100px" weight="100px"/>
                 <h1>Planner</h1>
             </div>
 

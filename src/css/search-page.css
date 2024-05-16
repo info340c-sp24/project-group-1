@@ -38,6 +38,12 @@ form input, form select{
     border-radius: 7px;
 }
 
+form input[name="GPA input"] {
+    height: 17px;
+    width: 68px;
+}
+
+
 .filter-container {  /* flexbox container for filter */
     display: flex;
     flex-wrap: wrap;
