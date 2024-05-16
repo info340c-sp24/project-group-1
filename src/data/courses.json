@@ -21,7 +21,7 @@
         "requirements": ["CSE courses"],
         "workload": "medium",
         "professors": ["Kevin Lin", "Kasey Champion"],
-        "image": "../img/java_stock_img.jpg",
+        "image": "../img/java_stock_image.jpg",
         "imageSource": "https://www.finoit.com/articles/java-coding-standards-best-practices/",
         "graph": "../img/cse373_graph.png"
     }

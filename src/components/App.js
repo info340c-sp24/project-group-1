@@ -7,10 +7,10 @@ function App() {
   return (
     <div className="container">
       <Header />
-        <CoursePage />
-       <Footer />
+      <CoursePage code="INFO 340" />
+      <Footer />
     </div>
-
+    
   );
 }
 
