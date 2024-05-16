@@ -1,21 +1,22 @@
 import React from 'react';
-import '../css/project-styling.css';
+import '../css/project-styling.css'; 
 
 function Course({ course }) {
     return (
-        <div>
-            <div>
+        <div class="course-container">
+            <div class="course-column">
+                <h1>{course.code}</h1>
                 <h2>{course.title}</h2>
-                <p>{course.description}</p>
+                <h3>{course.description}</h3>
                 <ul>
                     {course.skills.map(skill => (
                         <li key={skill}>{skill}</li>
                     ))}
                 </ul>
-                <p>Prerequisites: {course.prerequisites.join(', ')}</p>
-                <p>Requirements: {course.requirements}</p>
-                <p>Workload: {course.workload}</p>
-                <p>Professors: {course.professors.join(', ')}</p>
+                <h4>Prerequisites: {course.prerequisites.join(', ')}</h4>
+                <h4>Requirements: {course.requirements}</h4>
+                <h4>Workload: {course.workload}</h4>
+                <h4>Professors: {course.professors.join(', ')}</h4>
                 <img src={course.image} alt="Course" />
                 <cite><a href={course.imageSource}>Image Source</a></cite>
             </div>
