@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/search-page.css"
 
-function Search() {
+function Search() { 
 
     return (
         <div className="flex-container">
