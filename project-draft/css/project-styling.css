@@ -75,20 +75,35 @@ nav ul li img {
     height: auto;
 }
 
-
+.index-container {
+    display: flex;
+    justify-content: space-around;
+}
+  
+.index-column {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30%;
+}
 /* Position the form */
 
 .index-box {
-    border: 1px solid #ccc;
-    /* Border for each box */
-    padding: 10px;
-    /* Padding within each box */
+    background: #fff;
     margin-bottom: 10px;
-    /* Add some space between boxes */
-    height: 125px;
-    /* Fixed height for all boxes */
-    border-radius: 20px;
-    /* Rounded corners */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.index-box h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.index-box p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
 }
 
 .sign_in_form label,
