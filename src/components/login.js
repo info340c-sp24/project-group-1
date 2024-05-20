@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import '../css/project-styling.css';
 import '../css/login.css';
 
+
 function Login(){
 
-    <div className="container">
+    return (
+        <div className="container">
         <h1>Sign in</h1>
     
         <div className="login_form">
@@ -21,17 +24,19 @@ function Login(){
                 </div>
 
                 <div className="login_form_item">
-                    <a href="">Continue as Guest</a>
+                    <Link to="/create account">Create Account</Link>
                 </div>
 
                 <div className="login_form_item">
-                    <a href="create-account.html">Create Account</a>
+                    <Link to="/search">Continue as Guest</Link>
                 </div>
 
             </form>
         </div>
     </div>
 
+    );
+    
 }
 
 export default Login;

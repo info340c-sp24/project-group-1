@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import '../css/project-styling.css';
 import '../css/login.css';
 
 
 function CreateAccount(){
-
-    <div className="container">
+    return (
+        <div className="container">
             <h1>Create an Account</h1>
     
             <div className="create_account_form">
@@ -27,21 +28,23 @@ function CreateAccount(){
                     </div>
 
                     <div className="create_account_form_item">
-                        <button type="submit" name="submit_button" id="submit_create_account_button">Create Account</input>
+                        <button type="submit" name="submit_button" id="submit_create_account_button">Create Account</button>
                     </div>
 
                     <div className="create_account_form_item">
-                        <a href="">Continue as Guest</a>
+                        <Link to="/search">Continue as Guest</Link>
                     </div>
 
                     <div className="create_account_form_item">
-                        <a href="login.html">Log into existing acount</a>
+                    <Link to="/login">Log into existing acount</Link>
                     </div>
 
                 </form>
             </div>
 
         </div>
+
+    );
 
 }
 
