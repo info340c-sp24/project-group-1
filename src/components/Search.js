@@ -9,7 +9,7 @@ function Search() {
 
             {/* {heading and image (need to get them on the same line)} */}
             <div className="title">
-                <img src="../../public/img/iSchool_logo.png" alt="iSchool logo" height="100px" weight="100px"/>
+                <img src="/img/iSchool_logo.png" alt="iSchool logo" height="100px" weight="100px"/>
                 <h1>Planner</h1>
             </div>
 
