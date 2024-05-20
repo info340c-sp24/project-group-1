@@ -33,6 +33,7 @@ function App() {
           <Route path="/planner" element={<Planner />} />
           <Route path="/login" element={<Login />} />
           <Route path="/create account" element={<CreateAccount />} />
+          <Route path="/courses/:code" element={<CoursePage />} />
         </Routes>
         <Footer />
       </div>

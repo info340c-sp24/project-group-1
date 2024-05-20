@@ -1,14 +1,20 @@
 import React from 'react';
-import coursesData from '../data/courses.json'; // Import the course data
-import Course from './Course'; // Import the Course component
+import { useParams } from 'react-router-dom';
+import coursesData from '../data/courses.json';
+import Course from './Course';
 import '../css/project-styling.css';
 
-function CoursePage({ code }) {
+function CoursePage() {
+    const { code } = useParams();
     const course = coursesData.find(course => course.code === code);
 
     return (
-        <div>
-            {course && <Course course={course} />}
+        <div className="course-page">
+            {course ? (
+                <Course course={course} />
+            ) : (
+                <p>Course not found</p>
+            )}
         </div>
     );
 }

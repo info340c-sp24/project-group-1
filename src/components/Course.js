@@ -3,28 +3,45 @@ import '../css/project-styling.css';
 
 function Course({ course }) {
     return (
-        <div class="course-container">
-            <div class="course-column">
+        <div className="course-container">
+            <div className="course-column">
                 <h1>{course.code}</h1>
                 <h2>{course.title}</h2>
                 <h3>{course.description}</h3>
                 <ul>
-                    {course.skills.map(skill => (
+                    {course.skills && course.skills.map(skill => (
                         <li key={skill}>{skill}</li>
                     ))}
                 </ul>
-                <h4>Prerequisites: {course.prerequisites.join(', ')}</h4>
-                <h4>Requirements: {course.requirements}</h4>
-                <h4>Workload: {course.workload}</h4>
-                <h4>Professors: {course.professors.join(', ')}</h4>
-                <img src={course.image} alt="Course" />
-                <cite><a href={course.imageSource}>Image Source</a></cite>
-            </div>
-            
-            <div class="course-column">
-                <img src={course.graph} alt="course grade distribution"/>
+                {course.prerequisites && (
+                    <h4>Prerequisites: {course.prerequisites.join(', ')}</h4>
+                )}
+                {course.requirements && (
+                    <h4>Requirements: {course.requirements}</h4>
+                )}
+                {course.workload && (
+                    <h4>Workload: {course.workload}</h4>
+                )}
+                {course.professors && (
+                    <h4>Professors: {course.professors.join(', ')}</h4>
+                )}
+                {course.image && (
+                    <>
+                        <img src={course.image} alt="Course" />
+                        {course.imageSource && (
+                            <cite>
+                                <a href={course.imageSource} target="_blank" rel="noopener noreferrer">Image Source</a>
+                            </cite>
+                        )}
+                    </>
+                )}
             </div>
 
+            <div className="course-column">
+                {course.graph && (
+                    <img src={course.graph} alt="Course grade distribution" />
+                )}
+            </div>
         </div>
     );
 }
