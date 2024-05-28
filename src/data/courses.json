@@ -10,7 +10,9 @@
         "professors": ["James Kim", "Joel Ross"],
         "image": "../img/htmlstockimage.jpg",
         "imageSource": "https://pixabay.com/photos/code-html-digital-coding-web-1076536/",
-        "graph": "../img/info340_graph.jpg"
+        "graph": "../img/info340_graph.jpg",
+        "codingRequired": true
+
     },
     {
         "code": "CSE373",
@@ -23,7 +25,8 @@
         "professors": ["Kevin Lin", "Kasey Champion"],
         "image": "../img/java_stock_image.jpg",
         "imageSource": "https://www.finoit.com/articles/java-coding-standards-best-practices/",
-        "graph": "../img/cse373_graph.png"
+        "graph": "../img/cse373_graph.png",
+        "codingRequired": true
     },
     {
         "code": "INFO380",
@@ -36,7 +39,8 @@
         "professors": ["Sara Sanford"],
         "image": "../img/java_stock_image.jpg",
         "imageSource": "https://www.finoit.com/articles/java-coding-standards-best-practices/",
-        "graph": "../img/info380_graph.png"
+        "graph": "../img/info380_graph.png",
+        "codingRequired": false
     },
     {
         "code": "INFO360",
@@ -49,7 +53,8 @@
         "professors": ["Nam-Ho Park", "Jason Yip"],
         "image": "../img/java_stock_image.jpg",
         "imageSource": "https://www.finoit.com/articles/java-coding-standards-best-practices/",
-        "graph": "../img/info360_graph.png"
+        "graph": "../img/info360_graph.png",
+        "codingRequired": false
     },
     {
         "code": "INFO300",
@@ -62,7 +67,8 @@
         "professors": ["Katie Davis", "Clarita Lefthand-Bagley"],
         "image": "../img/java_stock_image.jpg",
         "imageSource": "https://www.finoit.com/articles/java-coding-standards-best-practices/",
-        "graph": "../img/info300_graph.png"
+        "graph": "../img/info300_graph.png",
+        "codingRequired": false
     },
     {
         "code": "CSE122",
@@ -75,7 +81,8 @@
         "professors": ["Miya Kaye Natsuhara", "Brett Wortzman"],
         "image": "../img/java_stock_image.jpg",
         "imageSource": "https://www.finoit.com/articles/java-coding-standards-best-practices/",
-        "graph": "../img/cse122_graph.png"
+        "graph": "../img/cse122_graph.png",
+        "codingRequired": true
     },
     {
         "code": "INFO351",
@@ -88,7 +95,8 @@
         "professors": ["Katherine Alejandra Cross", "Adam Daniel Moore"],
         "image": "../img/java_stock_image.jpg",
         "imageSource": "https://www.finoit.com/articles/java-coding-standards-best-practices/",
-        "graph": "../img/info351_graph.png"
+        "graph": "../img/info351_graph.png",
+        "codingRequired": false
     },
     {
         "code": "INFO330",
@@ -101,7 +109,8 @@
         "professors": ["Sam Otim"],
         "image": "../img/java_stock_image.jpg",
         "imageSource": "https://www.finoit.com/articles/java-coding-standards-best-practices/",
-        "graph": "../img/info330_graph.png"
+        "graph": "../img/info330_graph.png",
+        "codingRequired": true
     },
     {
         "code": "CSE123",
@@ -114,6 +123,7 @@
         "professors": ["James Rasmussen Wilcox", "Joe Spaniac"],
         "image": "../img/java_stock_image.jpg",
         "imageSource": "https://www.finoit.com/articles/java-coding-standards-best-practices/",
-        "graph": "../img/cse123_graph.png"
+        "graph": "../img/cse123_graph.png",
+        "codingRequired": true
     }
 ]
