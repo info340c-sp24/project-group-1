@@ -22,15 +22,15 @@ const initialData = {
       },
     },
     courses: {
-      'course-1': { id: 'course-1', code: 'CSE122', title: 'CSE 122', description: 'Introduction to Computer Programming II' },
-      'course-2': { id: 'course-2', code: 'INFO380', title: 'INFO 380', description: 'Product and Information Systems Management' },
-      'course-3': { id: 'course-3', code: 'INFO300', title: 'INFO 300', description: 'Research Methods' },
-      'course-4': { id: 'course-4', code: 'INFO330', title: 'INFO 330', description: 'Databases and Data Modeling' },
-      'course-5': { id: 'course-5', code: 'CSE123', title: 'CSE 123', description: 'Introduction to Computer Programming III' },
-      'course-6': { id: 'course-6', code: 'INFO360', title: 'INFO 360', description: 'Design Methods' },
-      'course-7': { id: 'course-7', code: 'INFO340', title: 'INFO 340', description: 'Client-Side Development'},
-      'course-8': { id: 'course-8', code: 'INFO351', title: 'INFO 351', description: 'Information Ethics and Policy' },
-      'course-9': { id: 'course-9', code: 'CSE373', title: 'CSE 373', description: 'Data Structures and Algorithms' },
+      'course-1': { id: 'course-1', code: 'CSE 122', title: 'Introduction to Computer Programming II' },
+      'course-2': { id: 'course-2', code: 'INFO 380', title: 'Product and Information Systems Management' },
+      'course-3': { id: 'course-3', code: 'INFO 300', title: 'Research Methods' },
+      'course-4': { id: 'course-4', code: 'INFO 330', title: 'Databases and Data Modeling' },
+      'course-5': { id: 'course-5', code: 'CSE 123', title: 'Introduction to Computer Programming III' },
+      'course-6': { id: 'course-6', code: 'INFO 360', title: 'Design Methods' },
+      'course-7': { id: 'course-7', code: 'INFO 340', title: 'Client-Side Development'},
+      'course-8': { id: 'course-8', code: 'INFO 351', title: 'Information Ethics and Policy' },
+      'course-9': { id: 'course-9', code: 'CSE 373', title: 'Data Structures and Algorithms' },
     },
   };
   
@@ -89,9 +89,9 @@ const initialData = {
                             {...provided.dragHandleProps}
                           >
                             <h3>
-                              <Link to={`/courses/${course.code}`}>{course.title}</Link>
+                              <Link to={`/courses/${course.code}`}>{course.code}</Link>
                             </h3>
-                            <p>{course.description}</p>
+                            <p>{course.title}</p>
                           </div>
                         )}
                       </Draggable>

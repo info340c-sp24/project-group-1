@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import courseData from "../data/courses.json";
 import "../css/project-styling.css";
 import "../css/search-page.css";
-import courseData from "../data/courses.json";
+
 
 function Search() {
     const [allCourses, setAllCourses] = useState([]); // contains all courses
@@ -22,7 +23,12 @@ function Search() {
     useEffect(() => {
         function filterCourses() {
             const filtered = allCourses.filter((course) => {
-                const matchesSearchTerm = searchTerm ? course.code.toLowerCase().includes(searchTerm.toLowerCase()) : true;
+
+                var matchesSearchTerm = false;
+                if (course.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                course.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                    matchesSearchTerm= true;
+                }
                 const matchesWorkload = filters.workload ? course.workload.toLowerCase() === filters.workload.toLowerCase() : true;
                 const matchesSpecialization = filters.specialization ? course.skills.includes(filters.specialization) : true;
                 const matchesPrerequisites = filters.prerequisites ? course.prerequisites[0] !== "None" : true;
@@ -35,13 +41,13 @@ function Search() {
         }
 
         filterCourses();
-    }, [searchTerm, filters, allCourses]);
+    }, [searchTerm, filters, allCourses]); // reset on change
 
-    const handleSearchChange = (e) => {
+    const handleSearchChange = (e) => { // gets new searchTerm
         setSearchTerm(e.target.value);
     };
 
-    const handleFilterChange = (e) => {
+    const handleFilterChange = (e) => { // ngl i do not understand how this works yet
         const { name, value, type, checked } = e.target;
         setFilters((prevFilters) => ({
             ...prevFilters,
