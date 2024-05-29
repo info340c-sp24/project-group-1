@@ -1,6 +1,6 @@
 [
     {
-        "code": "INFO340",
+        "code": "INFO 340",
         "title": "Client-Side Development",
         "description": "Introduction to client-side development on the internet, including markup, programming languages, protocols, libraries, and frameworks for creating and maintaining usable and accessible, interactive applications.",
         "skills": ["HTML/CSS", "JavaScript", "React", "Bootstrap"],
@@ -15,7 +15,7 @@
 
     },
     {
-        "code": "CSE373",
+        "code": "CSE 373",
         "title": "Data Structures and Algorithms",
         "description": "Fundamental algorithms and data structures for implementation. Techniques for solving problems by programming. Linked lists, stacks, queues, directed graphs. Trees: representations, traversals. Searching (hashing, binary search trees, multiway trees). Garbage collection, memory management. Internal and external sorting.",
         "skills": ["Java"],
@@ -29,7 +29,7 @@
         "codingRequired": true
     },
     {
-        "code": "INFO380",
+        "code": "INFO 380",
         "title": "Product And Information Systems Management",
         "description": "Provides students with the skills to design information systems and software. Students learn how to identify and analyze system needs in terms of organizational and stakeholder goals, system functionality, and the constraints in which it must operate. Students learn analysis and design methods to gather, model, and define system requirements.",
         "skills": ["Azure DevOps"],
@@ -43,7 +43,7 @@
         "codingRequired": false
     },
     {
-        "code": "INFO360",
+        "code": "INFO 360",
         "title": "Design Methods",
         "description": "Introduces design paradigms and methods for envisioning information systems that meet the needs of people, organizations, and society. Topics include design thinking, creativity, and the sketching, prototyping, evaluating, and specifying of information experiences. Engages questions of design justice, examining who is and is not served by design.",
         "skills": ["UI/UX Design"],
@@ -57,9 +57,9 @@
         "codingRequired": false
     },
     {
-        "code": "INFO300",
+        "code": "INFO 300",
         "title": "Research Methods",
-        "description": "Introduces research methods used to understand people's interactions with information, information technology, and information systems. Topics include epistemology, science, theory, research ethics, and a selection of qualitative, quantitative, and design methods for answering questions in both research and practical settings.",
+        "description": "Introduces research methods used to understand  people's interactions with information, information technology, and information systems. Topics include epistemology, science, theory, research ethics, and a selection of qualitative, quantitative, and design methods for answering questions in both research and practical settings.",
         "skills": ["Research"],
         "prerequisites": ["None"],
         "requirements": ["INFO core class"],
@@ -71,7 +71,7 @@
         "codingRequired": false
     },
     {
-        "code": "CSE122",
+        "code": "CSE 122",
         "title": "Introduction To Computer Programming II",
         "description": "Computer programming for students with some previous programming experience. Emphasizes program design, style, and decomposition. Uses data structures (e.g., lists, dictionaries, sets) to solve computational problems motivated by modern societal and scientific needs. Introduces data abstraction and interface versus implementation. Cannot be taken for credit if credit received for CSE 143.",
         "skills": ["Java"],
@@ -85,7 +85,7 @@
         "codingRequired": true
     },
     {
-        "code": "INFO351",
+        "code": "INFO 351",
         "title": "Informations Ethics And Policy",
         "description": "Provides an analytic philosophy framework from traditional western traditions for analyzing the ethical, legal, and policy issues surrounding information, information technologies, and the information industries. Explores policy and ethical issues of information access and control including: intellectual property, privacy, free speech, and security.",
         "skills": ["Policy Making", "Ethics"],
@@ -99,7 +99,7 @@
         "codingRequired": false
     },
     {
-        "code": "INFO330",
+        "code": "INFO 330",
         "title": "Databases And Data Modeling",
         "description": "Introduction to database systems, focused on relational models, languages, and systems and the application of conceptual, logical, and physical database design. Key topics include the relational model, SQL, entity-relationship modeling, three-tier architectures, implementation of database applications, and non-relational databases. Links data modeling decisions to social justice outcomes.",
         "skills": ["SQL"],
@@ -113,7 +113,7 @@
         "codingRequired": true
     },
     {
-        "code": "CSE123",
+        "code": "CSE 123",
         "title": "Introduction To Computer Programming III",
         "description": "Computer programming for students with significant previous programming experience. Emphasizes implementation and run-time analysis of data structures and algorithms using techniques including linked references, recursion, and object-oriented inheritance to solve computational problems motivated by modern societal and scientific needs.",
         "skills": ["Java"],
