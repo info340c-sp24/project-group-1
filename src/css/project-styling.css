@@ -68,8 +68,10 @@ nav ul li img {
     border-radius: 9px;
     
 }
-nav .appName {
+nav .appName a{
     text-decoration: none;
+    color: inherit;
+    font-family: 'Encode Sans Condensed', sans-serif;
 }
 
 
