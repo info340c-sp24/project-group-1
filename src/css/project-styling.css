@@ -68,6 +68,9 @@ nav ul li img {
     border-radius: 9px;
     
 }
+nav .appName {
+    text-decoration: none;
+}
 
 
 /* rules for images */

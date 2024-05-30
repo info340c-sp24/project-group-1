@@ -24,7 +24,7 @@ function Search() {
         function filterCourses() {
             const filtered = allCourses.filter((course) => {
 
-                var matchesSearchTerm = false;
+                var matchesSearchTerm = false; // ensures search works for both course code and title
                 if (course.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 course.title.toLowerCase().includes(searchTerm.toLowerCase())){
                     matchesSearchTerm= true;
