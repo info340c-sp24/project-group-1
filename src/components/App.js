@@ -1,32 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import Search from './Search.js';
 import CoursePage from './CoursePage.js';
 import Planner from './Planner.js';
-import Login from './Login.js';
+import Login from './login.js';
 import CreateAccount from './Create-account.js';
+import { auth } from './FirebaseConfig';
 import '../css/project-styling.css';
 
-const link = document.createElement('link');
-link.rel = 'stylesheet';
-link.href = 'https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap';
-document.head.appendChild(link);
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+    return () => unsubscribe();
+  }, []);
+
   return (
     <Router>
       <div className="container">
-        <Header />
+        <Header user={user} />
         <Routes>
           <Route path="/" element={<Search />} />
           <Route path="/search" element={<Search />} />
