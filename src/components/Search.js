@@ -140,8 +140,9 @@ function Search() {
             <div className="course-list">
                 {filteredCourses.map((course) => (
                     <div key={course.code} className="course-item">
-                        <h2>{course.title}</h2>
+                        <h2>{course.code} - {course.title}</h2>
                         <p>{course.description}</p>
+                        <button>Add to Planner</button>
                     </div>
                 ))}
             </div>
