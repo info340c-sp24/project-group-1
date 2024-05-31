@@ -83,8 +83,6 @@ nav .appName a{
 }
 
 
-/* Position the form */
-
 .index-box {
     border: 1px solid #ccc;
     /* Border for each box */
@@ -92,10 +90,21 @@ nav .appName a{
     /* Padding within each box */
     margin-bottom: 10px;
     /* Add some space between boxes */
-    height: 125px;
-    /* Fixed height for all boxes */
+    height: 150px; /* Fixed height for all boxes */
+    width: 100%; /* Make sure boxes take up the full width of their container */
+    box-sizing: border-box; /* Include padding and border in width and height */
     border-radius: 20px;
-    /* Rounded corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.index-box h3 {
+    
+}
+
+.index-box p {
+    font-size: 0.75em;
 }
 
 .sign_in_form label,
@@ -125,7 +134,8 @@ footer {  /* footer styling*/
     /* Defines the grid for the index page */
     .index-container {
         display: flex;
-        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
     }
     .index-column {
         flex-basis: 30%;
@@ -134,6 +144,11 @@ footer {  /* footer styling*/
         /* Padding around the content */
         box-sizing: border-box;
         /* Include padding in width calculation */
+        
+    }
+    .index-column h2 {
+        text-align: center;
+        margin-bottom: 10px;
     }
     .sign_in_form label,
     .sign_in_form input,

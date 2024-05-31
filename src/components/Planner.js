@@ -48,24 +48,54 @@ const initialData = {
         return;
       }
   
-      const column = data.columns[source.droppableId];
-      const newCourseIds = Array.from(column.courseIds);
-      newCourseIds.splice(source.index, 1);
-      newCourseIds.splice(destination.index, 0, draggableId);
+      const startColumn = data.columns[source.droppableId];
+      const finishColumn = data.columns[destination.droppableId];
+
+      if (startColumn === finishColumn) {
+        const newCourseIds = Array.from(startColumn.courseIds);
+        newCourseIds.splice(source.index, 1);
+        newCourseIds.splice(destination.index, 0, draggableId);
   
-      const newColumn = {
-        ...column,
-        courseIds: newCourseIds,
+        const newColumn = {
+          ...startColumn,
+          courseIds: newCourseIds,
+        };
+  
+        const newState = {
+          ...data,
+          columns: {
+            ...data.columns,
+            [newColumn.id]: newColumn,
+          },
+        };
+  
+        setData(newState);
+        return;
+      }
+
+      const startCourseIds = Array.from(startColumn.courseIds);
+      startCourseIds.splice(source.index, 1);
+      const newStartColumn = {
+        ...startColumn,
+        courseIds: startCourseIds,
       };
-  
+
+      const finishCourseIds = Array.from(finishColumn.courseIds);
+      finishCourseIds.splice(destination.index, 0, draggableId);
+      const newFinishColumn = {
+        ...finishColumn,
+        courseIds: finishCourseIds,
+      };
+
       const newState = {
         ...data,
         columns: {
           ...data.columns,
-          [newColumn.id]: newColumn,
+          [newStartColumn.id]: newStartColumn,
+          [newFinishColumn.id]: newFinishColumn,
         },
       };
-  
+
       setData(newState);
     };
   
@@ -95,7 +125,7 @@ const initialData = {
                           </div>
                         )}
                       </Draggable>
-                  );
+                    );
                   })}
                   {provided.placeholder}
                 </div>
