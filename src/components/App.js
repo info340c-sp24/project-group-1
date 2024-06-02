@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header.js';
@@ -23,16 +23,22 @@ ReactDOM.render(
 );
 
 function App() {
+  const [plannerCourses, setPlannerCourses] = useState([]);
+
+  const addCourseToPlanner = (course) => {
+    setPlannerCourses((prevCourses) => [...prevCourses, course]);
+  };
+
   return (
     <Router>
       <div className="container">
         <Header />
         <Routes>
-          <Route path="/" element={<Search />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/planner" element={<Planner />} />
+          <Route path="/" element={<Search addCourseToPlanner={addCourseToPlanner} />} />
+          <Route path="/search" element={<Search addCourseToPlanner={addCourseToPlanner} />} />
+          <Route path="/planner" element={<Planner plannerCourses={plannerCourses} />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/create account" element={<CreateAccount />} />
+          <Route path="/create-account" element={<CreateAccount />} />
           <Route path="/courses/:code" element={<CoursePage />} />
         </Routes>
         <Footer />
