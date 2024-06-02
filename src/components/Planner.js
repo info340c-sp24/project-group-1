@@ -1,54 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { Link } from 'react-router-dom';
 import '../css/project-styling.css';
 
-const initialData = {
-  columns: {
-    'column-1': {
-      id: 'column-1',
-      title: 'Autumn 2024',
-      courseIds: [],
-    },
-    'column-2': {
-      id: 'column-2',
-      title: 'Winter 2025',
-      courseIds: [],
-    },
-    'column-3': {
-      id: 'column-3',
-      title: 'Spring 2025',
-      courseIds: [],
-    },
-  },
-  courses: {},
-};
-
-const Planner = ({ plannerCourses }) => {
-  const [data, setData] = useState(initialData);
-
-  useEffect(() => {
-    const newCourses = {};
-    const newCourseIds = plannerCourses.map((course) => {
-      newCourses[course.code] = { id: course.code, ...course };
-      return course.code;
-    });
-
-    const updatedData = {
-      ...data,
-      courses: { ...data.courses, ...newCourses },
-      columns: {
-        ...data.columns,
-        'column-1': {
-          ...data.columns['column-1'],
-          courseIds: [...data.columns['column-1'].courseIds, ...newCourseIds],
-        },
-      },
-    };
-
-    setData(updatedData);
-  }, [plannerCourses]);
-
+const Planner = ({ plannerData, updatePlannerData }) => {
   const onDragEnd = (result) => {
     const { destination, source, draggableId } = result;
 
@@ -60,8 +15,8 @@ const Planner = ({ plannerCourses }) => {
       return;
     }
 
-    const startColumn = data.columns[source.droppableId];
-    const finishColumn = data.columns[destination.droppableId];
+    const startColumn = plannerData.columns[source.droppableId];
+    const finishColumn = plannerData.columns[destination.droppableId];
 
     if (startColumn === finishColumn) {
       const newCourseIds = Array.from(startColumn.courseIds);
@@ -74,14 +29,14 @@ const Planner = ({ plannerCourses }) => {
       };
 
       const newState = {
-        ...data,
+        ...plannerData,
         columns: {
-          ...data.columns,
+          ...plannerData.columns,
           [newColumn.id]: newColumn,
         },
       };
 
-      setData(newState);
+      updatePlannerData(newState);
       return;
     }
 
@@ -100,27 +55,27 @@ const Planner = ({ plannerCourses }) => {
     };
 
     const newState = {
-      ...data,
+      ...plannerData,
       columns: {
-        ...data.columns,
+        ...plannerData.columns,
         [newStartColumn.id]: newStartColumn,
         [newFinishColumn.id]: newFinishColumn,
       },
     };
 
-    setData(newState);
+    updatePlannerData(newState);
   };
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="index-container">
-        {Object.values(data.columns).map((column) => (
+        {Object.values(plannerData.columns).map((column) => (
           <Droppable key={column.id} droppableId={column.id}>
             {(provided) => (
               <div className="index-column" ref={provided.innerRef} {...provided.droppableProps}>
                 <h2>{column.title}</h2>
                 {column.courseIds.map((courseId, index) => {
-                  const course = data.courses[courseId];
+                  const course = plannerData.courses[courseId];
                   return (
                     <Draggable key={course.id} draggableId={course.id} index={index}>
                       {(provided) => (
