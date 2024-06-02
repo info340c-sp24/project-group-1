@@ -8,7 +8,6 @@ const Search = ({ addCourseToPlanner }) => {
   const [filteredCourses, setFilteredCourses] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState({
-    gpa: '',
     workload: '',
     specialization: '',
     prerequisites: false,
@@ -20,10 +19,10 @@ const Search = ({ addCourseToPlanner }) => {
   }, []);
 
   useEffect(() => {
-    const filterCourses = () => {
+    const filterCourses = () => { // filters courses 
       const filtered = allCourses.filter((course) => {
         const matchesSearchTerm =
-          course.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          course.code.toLowerCase().includes(searchTerm.toLowerCase()) || // search query can work with course title OR code
           course.title.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesWorkload = filters.workload ? course.workload.toLowerCase() === filters.workload.toLowerCase() : true;
         const matchesSpecialization = filters.specialization ? course.skills.includes(filters.specialization) : true;
@@ -45,11 +44,11 @@ const Search = ({ addCourseToPlanner }) => {
     filterCourses();
   }, [searchTerm, filters, allCourses]);
 
-  const handleSearchChange = (e) => {
+  const handleSearchChange = (e) => { // search bar changes
     setSearchTerm(e.target.value);
   };
 
-  const handleFilterChange = (e) => {
+  const handleFilterChange = (e) => { // filter changes
     const { name, value, type, checked } = e.target;
     setFilters((prevFilters) => ({
       ...prevFilters,
@@ -74,17 +73,6 @@ const Search = ({ addCourseToPlanner }) => {
       </div>
       <form className="flex-item" id="course_filter">
         <div className="filter-container">
-          <div className="filter-item">
-            <label htmlFor="GPA_input">Avg. GPA</label>
-            <input
-              name="gpa"
-              type="number"
-              min="0.0"
-              max="4.0"
-              id="GPA_input"
-              onChange={handleFilterChange}
-            />
-          </div>
           <div className="filter-item">
             <label htmlFor="workload_input">Workload</label>
             <select name="workload" id="workload_input" onChange={handleFilterChange}>
