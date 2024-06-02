@@ -1,51 +1,110 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../css/project-styling.css';
 import '../css/login.css';
+import { auth } from './Firebase.js';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
+function CreateAccount() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-function CreateAccount(){
-    return (
-        <div className="container">
-            <h1>Create an Account</h1>
-    
-            <div className="create_account_form">
-                <form id="create_account">
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    if (name === 'email') {
+      setEmail(value);
+    } else if (name === 'password') {
+      setPassword(value);
+    } else if (name === 'confirm_password') {
+      setConfirmPassword(value);
+    }
+  };
 
-                    <div className="create_account_form_item">
-                        <label for="email_input">Email</label>
-                        <input name="email" type="email" placeholder="" id="email_input"></input>
-                    </div>
+  const handleSignUp = async () => {
+    if (password !== confirmPassword) {
+      setErrorMessage("Passwords do not match");
+      return;
+    }
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      setEmail('');
+      setPassword('');
+      setConfirmPassword('');
+      setErrorMessage('');
+    } catch (error) {
+      setErrorMessage(error.message);
+    }
+  };
 
-                    <div className="create_account_form_item">
-                        <label for="password_input">Password</label>
-                        <input name="password" type="password" placeholder="" id="password_input"></input>
-                    </div>
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
-                    <div className="create_account_form_item">
-                        <label for="confirm_password_input">Confirm Password</label>
-                        <input name="confirm_password" type="password" placeholder="" id="confirm_password_input"></input>
-                    </div>
+  const isNotReadytoSubmit = (!isValidEmail(email) || password === '' || password !== confirmPassword);
 
-                    <div className="create_account_form_item">
-                        <button type="submit" name="submit_button" id="submit_create_account_button">Create Account</button>
-                    </div>
+  return (
+    <div className="container">
+      <h1>Create an Account</h1>
+      <div className="create_account_form">
+        <form onSubmit={(e) => e.preventDefault()}>
 
-                    <div className="create_account_form_item">
-                        <Link to="/search">Continue as Guest</Link>
-                    </div>
+          <div className="create_account_form_item">
+            <label htmlFor="email_input">Email</label>
+            <input
+              name="email"
+              type="email"
+              id="email_input"
+              value={email}
+              onChange={handleChange}
+            />
+          </div>
 
-                    <div className="create_account_form_item">
-                    <Link to="/login">Log into existing acount</Link>
-                    </div>
+          <div className="create_account_form_item">
+            <label htmlFor="password_input">Password</label>
+            <input
+              name="password"
+              type="password"
+              id="password_input"
+              value={password}
+              onChange={handleChange}
+            />
+          </div>
 
-                </form>
-            </div>
+          <div className="create_account_form_item">
+            <label htmlFor="confirm_password_input">Confirm Password</label>
+            <input
+              name="confirm_password"
+              type="password"
+              id="confirm_password_input"
+              value={confirmPassword}
+              onChange={handleChange}
+            />
+          </div>
 
-        </div>
+          <button
+            className="create_account_form_item"
+            onClick={handleSignUp}
+            disabled={isNotReadytoSubmit}
+          >
+            Create Account
+          </button>
 
-    );
+          <div className="create_account_form_item">
+            <Link to="/search">Continue as Guest</Link>
+          </div>
 
+          <div className="create_account_form_item">
+            <Link to="/login">Log into existing account</Link>
+          </div>
+
+          {errorMessage && <div className="error_message">{errorMessage}</div>}
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default CreateAccount;

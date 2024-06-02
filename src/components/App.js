@@ -6,7 +6,7 @@ import Footer from './Footer.js';
 import Search from './Search.js';
 import CoursePage from './CoursePage.js';
 import Planner from './Planner.js';
-import Login from './Login.js';
+import Login from './login.js';
 import CreateAccount from './Create-account.js';
 import '../css/project-styling.css';
 
@@ -32,7 +32,7 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/planner" element={<Planner />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/create account" element={<CreateAccount />} />
+          <Route path="/create-account" element={<CreateAccount />} />
           <Route path="/courses/:code" element={<CoursePage />} />
         </Routes>
         <Footer />

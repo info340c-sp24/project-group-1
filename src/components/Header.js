@@ -1,30 +1,34 @@
 import React from 'react';
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from './Firebase.js';
 import '../css/project-styling.css';
 
-
 function Header() {
+  const [user] = useAuthState(auth);
+
   return (
-    <html>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <div className="appName">
-                <Link to="/search">
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <div className="appName">
+              <Link to="/search">
                 <img src="./img/iSchool_logo.png" alt="iSchool logo" />
                 Planner
-                </Link>
-                </div>
-            </li>  
-            <li><Link to="/planner">Planner</Link></li>
-            <li><Link to="/login">Sign in</Link></li>
-          </ul>
-        </nav>
-      </header>
-
-    </html>
-    
+              </Link>
+            </div>
+          </li>
+          <li><Link to="/planner">Planner</Link></li>
+          <li><Link to="/login">Sign in</Link></li>
+          <li>
+            <div className="user-info">
+              {user ? user.email : 'Guest'}
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }
 
