@@ -7,7 +7,7 @@
 
 body {
     margin-top: 60px;
-
+    background-color: #f1eeee;
     /* for footer */
     padding: 0;
     margin-bottom: 80px;
@@ -42,9 +42,10 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #dfdfdf;
+    background-color: #4b2e83;
     padding: 0.5rem;
     padding-bottom: 1rem;
+    color: white;
 }
 
 nav ul {
@@ -97,6 +98,7 @@ nav .appName a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: white;
 }
 
 .index-box h3 {
@@ -114,6 +116,33 @@ nav .appName a{
     margin-top: 10%;
     margin-bottom: 1rem;
 }
+
+.checklist {
+    position: fixed;
+    top: 75px; /* Adjust as needed */
+    right: 0;
+    padding: 20px;
+    background-color: white;
+    border-left: 1px solid #ccc; /* Add border to separate from planner */
+    border-radius: 10px;
+  }
+  
+  .checklist h2 {
+    margin-bottom: 10px;
+  }
+  
+  .checklist ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .checklist li {
+    margin-bottom: 5px;
+  }
+  
+  .checklist input[type="checkbox"] {
+    margin-right: 5px;
+  }
 
 footer {  /* footer styling*/
     display: none;
