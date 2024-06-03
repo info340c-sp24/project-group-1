@@ -77,9 +77,13 @@ nav a {
 
 
 nav .appName a{
-    text-decoration: none;
+    text-decoration: underline;
     color: inherit;
     font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+nav .user-info {
+    font-size: 30px;
 }
 
 /* rules for images */
