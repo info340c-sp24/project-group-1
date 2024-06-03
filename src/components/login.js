@@ -42,13 +42,6 @@ function Login() {
     }
   };
 
-  const isValidEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
-  const isNotReadytoSubmit = !!user || (!isValidEmail(email) || password === '');
-
   return (
     <div className="container">
       <h1>Sign in</h1>
@@ -79,7 +72,6 @@ function Login() {
 
           <button
             onClick={handleSignIn}
-            disabled={isNotReadytoSubmit}
           >
             Sign In
           </button>
