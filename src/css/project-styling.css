@@ -82,7 +82,6 @@ nav .appName a{
     font-family: 'Encode Sans Condensed', sans-serif;
 }
 
-
 /* rules for images */
 
 .course-container img {
@@ -106,10 +105,6 @@ nav .appName a{
     flex-direction: column;
     justify-content: space-between;
     background-color: #dfdfdf;
-}
-
-.index-box h3 {
-    
 }
 
 .index-box p {
@@ -167,8 +162,17 @@ footer {  /* footer styling*/
     line-height: .4rem; /* Adjust the value to decrease or increase the space between lines */
 }
 
+@media (max-width: 597px) {
+    .course-item p {
+        display: none;
+    }
 
-  @media (min-width: 598px) {
+    .course-item h2 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 598px) {
     /* Defines the grid for the index page */
     nav ul li {
         font-size: 40px;
@@ -209,13 +213,6 @@ footer {  /* footer styling*/
         height: auto;
     }
 }
-  
-
-@media (min-width: 598px){
-}
-
-@media (min-width: 768px){
-}
 
 @media (min-width: 992px){
     footer{
@@ -223,7 +220,3 @@ footer {  /* footer styling*/
     }
     
 }
-
-@media (min-width: 1200px){
-}
-

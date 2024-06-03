@@ -13,13 +13,13 @@ function Header() {
         <ul>
           <li>
             <div className="appName">
-              <Link to="/search">
+              <Link to="/planner">
                 <img src="./img/iSchool_logo.png" alt="iSchool logo" />
                 Planner
               </Link>
             </div>
           </li>
-          <li><Link to="/planner">Planner</Link></li>
+          <li><Link to="/search">Search</Link></li>
           <li><Link to="/login">Sign in</Link></li>
           <li>
             <div className="user-info">
