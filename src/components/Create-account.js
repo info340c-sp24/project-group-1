@@ -38,13 +38,6 @@ function CreateAccount() {
     }
   };
 
-  const isValidEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
-  const isNotReadytoSubmit = (!isValidEmail(email) || password === '' || password !== confirmPassword);
-
   return (
     <div className="container">
       <h1>Create an Account</h1>
@@ -86,7 +79,6 @@ function CreateAccount() {
 
           <button
             onClick={handleSignUp}
-            disabled={isNotReadytoSubmit}
           >
             Create Account
           </button>
