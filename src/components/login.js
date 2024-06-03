@@ -78,7 +78,6 @@ function Login() {
           </div>
 
           <button
-            className="login_form_item"
             onClick={handleSignIn}
             disabled={isNotReadytoSubmit}
           >

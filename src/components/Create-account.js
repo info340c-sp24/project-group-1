@@ -85,7 +85,6 @@ function CreateAccount() {
           </div>
 
           <button
-            className="create_account_form_item"
             onClick={handleSignUp}
             disabled={isNotReadytoSubmit}
           >
