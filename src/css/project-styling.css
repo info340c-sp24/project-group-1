@@ -132,6 +132,8 @@ nav .appName a{
     background-color: white;
     border-left: 1px solid #ccc; /* Add border to separate from planner */
     border-radius: 10px;
+    height: calc(100% - 60px); /* Full height minus top margin */
+    overflow-y: auto; /* Scroll if content overflows */
   }
   
   .checklist h2 {
