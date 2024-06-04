@@ -25,16 +25,6 @@ function Course({ course }) {
                 {course.professors && (
                     <h4>Professors: {course.professors.join(', ')}</h4>
                 )}
-                {course.image && (
-                    <>
-                        <img src={course.image} alt="Course" />
-                        {course.imageSource && (
-                            <cite>
-                                <a href={course.imageSource} target="_blank" rel="noopener noreferrer">Image Source</a>
-                            </cite>
-                        )}
-                    </>
-                )}
             </div>
 
             <div className="course-column">
