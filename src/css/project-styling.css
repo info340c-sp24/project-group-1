@@ -123,15 +123,10 @@ nav .user-info {
 }
 
 .checklist {
-    position: fixed;
-    top: 75px; /* Adjust as needed */
-    right: 0;
+    flex-shrink: 0;
+    border-radius: 10px;
     padding: 20px;
     background-color: white;
-    border-left: 1px solid #ccc; /* Add border to separate from planner */
-    border-radius: 10px;
-    height: calc(100% - 60px); /* Full height minus top margin */
-    overflow-y: auto; /* Scroll if content overflows */
   }
   
   .checklist h2 {
@@ -141,10 +136,13 @@ nav .user-info {
   .checklist ul {
     padding: 0;
     list-style-type: none;
+    font-size: 10px;
   }
   
   .checklist li {
     margin-bottom: 5px;
+    display: flex;
+    align-items: center;
   }
   
   .checklist input[type="checkbox"] {
@@ -187,7 +185,7 @@ footer a {
 
     .index-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: flex-start;
     }
     .index-column {
@@ -197,6 +195,7 @@ footer a {
         /* Padding around the content */
         box-sizing: border-box;
         /* Include padding in width calculation */
+        left: 0;
         
     }
     .index-column h2 {
@@ -225,5 +224,12 @@ footer a {
     footer{
         display: block;
     }
-    
+    .checklist {
+        position: fixed;
+        top: 75px; /* Adjust as needed */
+        right: 0;
+        border-left: 1px solid #ccc; /* Add border to separate from planner */
+        height: calc(100% - 60px); /* Full height minus top margin */
+        overflow-y: auto; /* Scroll if content overflows */
+    }
 }
