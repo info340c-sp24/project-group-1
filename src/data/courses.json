@@ -147,7 +147,7 @@
         "requirements": ["INFO Intro class"],
         "workload": "heavy",
         "professors": ["Kyle Thayer", "Dave Hendry"],
-        "graph": "../img/info_201graph.png",
+        "graph": "../img/info201_graph.png",
         "codingRequired": true
     },
     {
@@ -159,7 +159,7 @@
         "requirements": ["INFO elective class"],
         "workload": "medium",
         "professors": ["Jevin West"],
-        "graph": "../img/info_graph.png",
+        "graph": "../img/info270_graph.png",
         "codingRequired": false
     },
     {
@@ -195,7 +195,7 @@
         "requirements": ["None"],
         "workload": "medium",
         "professors": [""],
-        "graph": "../img/info_graph.png",
+        "graph": "../img/info331_graph.png",
         "codingRequired": true
     },
     {
