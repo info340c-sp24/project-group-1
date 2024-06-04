@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import courseData from '../data/courses.json';
 import '../css/project-styling.css';
 import '../css/search-page.css';
+import { Link } from 'react-router-dom';
 
 const Search = ({ addCourseToPlanner }) => {
   const [allCourses, setAllCourses] = useState([]);
@@ -117,7 +118,7 @@ const Search = ({ addCourseToPlanner }) => {
       <div className="course-list">
         {filteredCourses.map((course) => (
           <div key={course.code} className="course-item">
-            <h2>{course.code} - {course.title}</h2>
+            <h2>{<Link to={`/courses/${course.code}`}>{course.code}</Link>} - {course.title}</h2>
             <p>{course.description}</p>
             <button onClick={() => addCourseToPlanner(course)}>Add to Planner</button>
           </div>
