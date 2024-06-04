@@ -162,6 +162,7 @@ footer {  /* footer styling*/
     color: #fff; /* Footer text color */
     text-align: center; /* Center-align text */
     line-height: .4rem; /* Adjust the value to decrease or increase the space between lines */
+
 }
 
 footer a {
