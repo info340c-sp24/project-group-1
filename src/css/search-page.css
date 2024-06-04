@@ -1,4 +1,4 @@
-.title { /* this flexbox is to get the iSchool logo and title on the same line */
+.title { /* this flexbox is to get the i school logo and title on the same line */
     display: flex;
     align-items: center;
     margin: 3rem;
