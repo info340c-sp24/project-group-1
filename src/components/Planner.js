@@ -5,8 +5,15 @@ import '../css/project-styling.css';
 
 const Planner = ({ plannerData, updatePlannerData }) => {
   const requirements = {
-    'CSE': ['CSE 373', 'CSE 122', 'CSE 123'], // Example requirement
-    // Add more requirements as needed
+    'INFO Prereqs': { courses: ['INFO 200', 'INFO 201', 'STAT 221'], needed: 3},
+    'INFO Core Courses': { courses: ['INFO 290', 'INFO 300', 'INFO 330', 'INFO 340', 'INFO 360', 'INFO 380'], needed: 6},
+    'INFO Ethics Courses': { courses: ['INFO 35', 'INFO 35'], needed: 2},
+    'Advanced Coding Course 1': { courses: ['CSE 123', 'CSE 163'], needed: 1},
+    'Advanced Coding Course 2': { courses: ['INFO 442', 'CSE 373'], needed: 1},
+    'Capstone': { courses: ['INFO 490', 'INFO 491'], needed: 2},
+    'Intensive Capstone': { courses: ['INFO 492'], needed: 1},
+    'Data Science Option': { courses: ['INFO 370', 'INFO 371', 'INFO 430', 'INFO 474'], needed: 4},
+    'Biomedical and Health Informatics Option': { courses: ['BIME 300', 'BIME 435', 'INFO 468', 'INFO 478'], needed: 4}
   };
 
   const [completedRequirements, setCompletedRequirements] = useState({});
@@ -14,9 +21,12 @@ const Planner = ({ plannerData, updatePlannerData }) => {
   useEffect(() => {
     const updatedCompletedRequirements = {};
     Object.keys(requirements).forEach(req => {
-      updatedCompletedRequirements[req] = requirements[req].every(course => 
+      const requirement = requirements[req];
+      const completedCourses = requirement.courses.filter(course =>
         Object.values(plannerData.columns).some(column => column.courseIds.includes(course))
-      );
+      ).length;
+
+      updatedCompletedRequirements[req] = completedCourses >= requirement.needed;
     });
     setCompletedRequirements(updatedCompletedRequirements);
   }, [plannerData]);
@@ -126,7 +136,7 @@ const Planner = ({ plannerData, updatePlannerData }) => {
             {Object.keys(requirements).map(req => (
               <li key={req}>
                 <input type="checkbox" checked={completedRequirements[req]} readOnly />
-                <label>{req} Requirement</label>
+                <label>{req}</label>
               </li>
             ))}
           </ul>
