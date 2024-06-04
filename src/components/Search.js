@@ -20,10 +20,10 @@ const Search = ({ addCourseToPlanner }) => {
   }, []);
 
   useEffect(() => {
-    const filterCourses = () => { // filters courses 
+    const filterCourses = () => { 
       const filtered = allCourses.filter((course) => {
         const matchesSearchTerm =
-          course.code.toLowerCase().includes(searchTerm.toLowerCase()) || // search query can work with course title OR code
+          course.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
           course.title.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesWorkload = filters.workload ? course.workload.toLowerCase() === filters.workload.toLowerCase() : true;
         const matchesSpecialization = filters.specialization ? course.skills.includes(filters.specialization) : true;
@@ -45,11 +45,11 @@ const Search = ({ addCourseToPlanner }) => {
     filterCourses();
   }, [searchTerm, filters, allCourses]);
 
-  const handleSearchChange = (e) => { // search bar changes
+  const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
-  const handleFilterChange = (e) => { // filter changes
+  const handleFilterChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFilters((prevFilters) => ({
       ...prevFilters,

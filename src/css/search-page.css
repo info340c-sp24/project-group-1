@@ -1,4 +1,4 @@
-.title { /* this flexbox is to get the i school logo and title on the same line */
+.title {
     display: flex;
     align-items: center;
     margin: 3rem;
@@ -31,7 +31,6 @@
     border-radius: 15px;
 }
 
-/* Style checkboxes and labels for the search page*/
 
 form input, form select{
     border-radius: 7px;
@@ -43,17 +42,17 @@ form input[name="GPA input"] {
 }
 
 
-.filter-container {  /* flexbox container for filter */
+.filter-container { 
     display: flex;
     flex-wrap: wrap;
 }
 
-.filter-item { /* flexbox item for filter - each filter is an item */
+.filter-item { 
     flex-wrap: wrap;
     margin: 0.5rem; 
 }
 
-.checkbox-item{   /* flexbox container checkbox filters - this formats the checkbox filters correctly */
+.checkbox-item{ 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,7 +83,7 @@ label {
     }
   
     .filter-item {
-      width: 100%; /* Ensure each item takes full width */
+      width: 100%; 
     }
 }
   

@@ -42,7 +42,7 @@ function App() {
   const addCourseToPlanner = (course) => {
     setPlannerData((prevData) => {
       if (Object.values(prevData.courses).some((c) => c.code === course.code)) {
-        return prevData; // Don't add if course already exists
+        return prevData;
       }
 
       const newCourses = {
